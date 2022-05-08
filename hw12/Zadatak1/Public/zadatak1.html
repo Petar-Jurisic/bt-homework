@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head> 
+    <body style="background-image: url('../Return_of_Sports.jpg'); background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
+        <form style="width: 50vw; margin-left: 35vw; height: 50vw; margin-top: 23vw;" action="zadatak1.php" method="GET">
+        <fieldset style="background-image: linear-gradient(#53475b35,#F8521d25); opacity: 0.8; border-width:10px; width:600px; border-color: purple;">
+            <legend><font size="5" font color=blue>Calorie Calculator</font></legend>
+                    <label for="profession" style="margin-left: 4vw">Your profession:</label>
+                        <select style="margin-left: 14.7%" type="text" id="profession" name="profession" required>
+                            <option value=""> Select your option: </option>
+                            <option value=100> Administrative worker </option>
+                            <option value=300> Athlete </option>
+                            <option value=100> Manager </option>       
+                            <option value=100> Programmer </option>
+                            <option value=200> Police Officer </option>
+                            <option value=200> Soldier </option>
+                            <option value=150> Other </option>
+                         </select><br><br>
+                    <label for="mass" style="margin-left: 0.5vw">Your body mass in kgs:</label>
+                        <input style="margin-left: 15%" type="number" min="35" max="500" id="mass" name="mass" placeholder="Enter body mass" required><br><br>
+                    <label for="age" style="margin-left: 7.5vw">Your age:</label>
+                            <input style="margin-left: 15%" type="number" min="0" max="115" id="age" name="age" placeholder="Enter your age:"><br><br>
+                        <button style="color: #ff00ff70; background-color:#04f2fa50; margin-left: 28%; opacity: 0.8; border-radius: 25%; width: 90px; text-shadow: 1px 2px rgba(0,0,0,1); font-size: 20px; padding: 0.4vw; padding-bottom: 0.7vw;" type="reset" value="Reset">Reset </button>
+                        <button style="color: #ff00ff70; background-color:#04f2fa50; margin-left: 4vw; opacity: 0.8; border-radius: 25%; width: 90px; text-shadow: 1px 2px rgba(0,0,0,1); font-size: 20px; padding: 0.4vw; padding-bottom: 0.8vw;" type="submit" onMouse="location.href='register.php';" name="submit" value="Submit">Submit</button> 
+        </form> 
+        </fieldset>
+    </body>
+
+</html>

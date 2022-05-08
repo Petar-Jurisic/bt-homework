@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head> 
+    <body style="background-image: url('../the_wall.jpg'); background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
+        <form style="width: 50vw; margin-left: 25vw; height: 50vw; margin-top: 10vw;" action="Zadatak2.php" method="GET">
+        <fieldset style="background-image: linear-gradient(#53475b35,#F8521d25); opacity: 0.8; border-width:10px; width:600px; border-color: rgb(109, 105, 109);">
+            <legend><font size="5" font color=brick>Tile calculator</font></legend>
+            <label for="tile_height" style="margin-left: 0.5vw">Tile height in mm:</label>
+            <input style="margin-left: 15%" type="number" min="10" max="5000" id="tile_height" name="tile_height" placeholder="Enter tile height"><br><br>
+            <label for="tile_width" style="margin-left: 0.5vw">Tile width in mm:</label>
+            <input style="margin-left: 15.5%" type="number" min="10" max="5000" id="tile_width" name="tile_width" placeholder="Enter tile width"><br><br>
+            <label for="wall_height" style="margin-left: 0.5vw">Wall height in mm:</label>
+            <input style="margin-left: 14%" type="number" min="100" max="50000" id="wall_height" name="wall_height" placeholder="Enter wall height"><br><br>
+            <label for="wall_width" style="margin-left: 0.5vw">Wall width in mm:</label>
+            <input style="margin-left: 14.7%" type="number" min="100" max="50000" id="wall_width" name="wall_width" placeholder="Enter wall width"><br><br>
+
+
+                        <button style="color: #7a787a70; background-color:#04f2fa50; margin-left: 28%; opacity: 0.8; border-radius: 25%; width: 90px; text-shadow: 1px 2px rgba(0,0,0,1); font-size: 20px; padding: 0.4vw; padding-bottom: 0.7vw;" type="reset" value="Reset">Reset </button>
+                        <button style="color: #7a787a70; background-color:#04f2fa50; margin-left: 4vw; opacity: 0.8; border-radius: 25%; width: 90px; text-shadow: 1px 2px rgba(0,0,0,1); font-size: 20px; padding: 0.4vw; padding-bottom: 0.8vw;" type="submit" onMouse="location.href='register.php';" name="submit" value="Submit">Submit</button> 
+        </form> 
+        </fieldset>
+    </body>
+
+</html>
