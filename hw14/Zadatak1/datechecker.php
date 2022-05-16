@@ -14,22 +14,80 @@
 $d = $_GET['day'];
 $m = $_GET['month'];
 $y = $_GET['year'];
-$f = false;
-if (isset($_GET)) {
+$flag = true;
 
-    function validateDate($a, $b, $c) {
-        return (checkdate($a, $b, $c)); 
-      }
-
+if(!is_numeric($y)) {
+    $flag = false;
+}
+else {
+    if(!is_int((int)($y))) {
+    $flag = false;
+    }
 }
 
-$date=(validateDate($m, $d, $y) ? 'true' : 'false');
-if ($date=true) {
-    echo "The date is valid!";
+if ($y<1910) {
+    $flag = false;
 }
 
-else echo "The date is NOT valid!";
+if (empty($_GET['day'])) {
+    die ("Please enter day!");
+}
 
+if (empty($_GET['month'])) {
+    die ("Please enter month!");
+}
+
+if (empty($_GET['year'])) {
+    die ("Please enter year!");
+}
+
+switch ($m) {
+
+    case 2:
+        if ($y%4 !== 0) {
+            if ($d<1 || $d>28) {
+                $flag = false;
+            }
+            else if ($y%4 == 0) {
+                if ($d<1 || $d>29) {
+                $flag = false;
+            }
+        }
+    }
+        break;
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        if ($d<1 || $d>31) {
+            $flag = false;
+        }
+        break;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        if ($d<1 || $d>30) {
+            $flag = false;
+        }
+        break;
+
+    default:
+            $flag = false;
+        break;
+}
+
+$validDate = "<font size=6px font color=green>The date is valid!</font>";
+$invalidDate = "<font size=6px font color=brick>The date is <u>NOT</u> valid!</font>";
+
+if ($flag) {
+    echo $validDate;
+}
+else echo $invalidDate;
 ?>
     </body>
 </html>
