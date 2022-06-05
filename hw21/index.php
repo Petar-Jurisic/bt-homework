@@ -1,3 +1,9 @@
+<!-- 
+
+INSERT INTO `colors`(`name`, `hex_value`, `status`) VALUES ('Beige','#6507ed','1'), ('DarkGray','#728016','1'), ('Salmon','#acd8e7','1'), ('Linen','#a4546f','0'), ('LightCoral','#e1924e','0'), ('LightBlueSky','#a70a42','0'), ('Seashell','#fab686','0'), ('Navy','#2a486c','0'), ('LavenderBlush','#aaead1','1'), ('LightBlue','#cdda18','0')
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
