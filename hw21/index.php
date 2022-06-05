@@ -32,7 +32,6 @@ $query6 = "DELETE FROM colors ORDER BY updated_at LIMIT 1";
 $d = $pdo->query($query1);
 
 if (isset($_POST['submit'])) {  
-
 ?>
 <br>
 <table border="3" cellpadding="5" cellspacing="5" align="center">
@@ -47,7 +46,7 @@ if (isset($_POST['submit'])) {
 <?php
 foreach ($d as $data) {
 ?>
-<tr align="center">
+<tr  style="color:cornsilk; text-align:center">
     <td><?php echo $data['id'];?></td>
     <td><?php echo $data['name'];?></td>
     <td><?php echo $data['hex_value'];?></td>
@@ -55,8 +54,23 @@ foreach ($d as $data) {
     <td><?php echo $data['created_at'];?></td>
     <td><?php echo $data['updated_at'];?></td>
 </tr>
+
 <?php 
 }
 }
 ?>
 </table>
+<br>
+    <?php
+    if (isset($_POST['submit'])) { 
+    ?>  
+
+<h2 style="color:cornsilk; text-align:center">Also, take a look at these: </h2>
+<p align="center"><?php echo "2. $query2 <br>"?></p>
+<p align="center"><?php echo "3. $query3 <br>"?></p>
+<p align="center"><?php echo "4. $query4 <br>"?></p>
+<p align="center"><?php echo "5. $query5 <br>"?></p>
+<p align="center"><?php echo "6. $query6 <br>"?></p>
+<?php 
+}
+?>
